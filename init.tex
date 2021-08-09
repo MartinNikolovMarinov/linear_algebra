@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
+
+% Global margins for the document:
+\usepackage[
+    top=0.6cm,
+    left=0.6cm,
+    bottom=2cm,
+    right=0.6cm,
+]{geometry}
+
+% Define spacing between paragraphs in the document:
+\setlength{\parindent}{0.5cm} % default indentation before the first line of a paragraph.
+\setlength{\topskip}{0.2cm} % indentation at the begging of the first paragraph of every page:
+\setlength{\parskip}{0.3cm} % indentation after every paragraph
+
+% Font configurations:
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+
+% For justify and some other alignment extensions:
+\usepackage{ragged2e}
+
+% Math related packages:
+\usepackage{amsmath, amssymb, amsthm}
+% For vectors:
+\usepackage{esvect}
+% Proper calculates where the not line should be drawn:
+\usepackage{centernot}
+% Theorem definitions:
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma} % a lemma that shares a counter with the Theorem.
+\newtheorem{defn}{Definition}
+% Package for systems:
+\usepackage{systeme}
+
+% Embedding *.jpg abd *.png images
+\usepackage{graphicx}
+\graphicspath{{data/}{../data/}} % define the path to the images
+
+% Provides an underline command which will break over line ends:
+\usepackage{ulem}
+
+% Better lines for tables:
+\usepackage{hhline}
+
+% Allows enumerate environment to customize the label:
+\usepackage{enumitem}
+
+% Multirow :
+\usepackage{multirow}
+
+% To use arrays:
+\usepackage{array}
+
+% Custom commands for table alignment when dealing with a lot of text (needs array and ragged2e):
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Hyper links to places inside the document:
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    % These take rgb values as a fraction of n/255.
+    % That is really not how RGB works!
+    linkcolor=[rgb]{0.1, 0.2, 1},
+    filecolor=[rgb]{0.1, 0.2, 1},
+    urlcolor=[rgb]{0.1, 0.2, 1},
+    citecolor=[rgb]{0.1, 0.2, 1},
+    unicode=true,
+}
+\urlstyle{same}
+
+% For fancy programming code formatting and coloring:
+\usepackage{minted}
+
+% For pretty quotes:
+\usepackage{epigraph}
+\setlength\epigraphwidth{1\textwidth}
+\setlength\epigraphrule{0pt}
+
+% For a footer and header:
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% \fancyhead[L]{Top Left Head}
+% \fancyhead[C]{Center Head}
+% \fancyhead[R]{Top Right Head}
+
+% \fancyfoot[L]{Bottom Left Foot}
+\fancyfoot[C]{Page \thepage}
+% \fancyfoot[R]{Bottom Right Foot}
+
+% Bibliography:
+\usepackage{csquotes}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{init.bib}
+
+% For inserting loremipsum random text:
+\usepackage[pangram]{blindtext}
+
+% Allows adding sub tex files to the main tex file:
+\usepackage{subfiles} % Best loaded last in the preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \huge
+        \textbf{Решения на задачи по \\ Линейна Алгебра}
+
+        \large \vfill
+        Последна промяна на \today
+    \end{center}
+\end{titlepage}
+\newpage
+
+% TOC:
+\tableofcontents
+\newpage
+
+\section{Линейни Системи}
+
+\subsection{Метода на Гаус}
+
+\noindent Решаване на системи уравнения по Метода на Гаус, още познато като линейна елиминация.
+
+\noindent Една линейна система запазва еднакво множеството от решения при трансформация чрез една от тези операции:
+\begin{enumerate}
+    \item Един ред от системата може да се размени с друг.
+    \item Едно от уравненията може да се умножи по ненулева константа.
+    \item Уравнение на един ред, умножено с число, може да се прибави към уравнение на друг ред.
+\end{enumerate}
+
+\noindent Тези операции се правят докато:
+\begin{enumerate}
+    \item Се намери непротиворечива стойността на една от търсените променливи. \textbf{Тогава имаме решение.}
+    \item Се стигне до логическо противоречие, например $0=-1$. \textbf{Тогава нямаме решение.}
+    \item Се останови, че нито една от стъпките не води до опростяване на кякой от редовете. \textbf{Тогава имаме безкрайно много решения.}
+\end{enumerate}
+
+\subfile{sections/gauss_method_examples.tex}
+\subfile{sections/ex_1.17.tex}
+\subfile{sections/ex_1.18.tex}
+\subfile{sections/ex_1.19.tex}
+\subfile{sections/ex_1.20.tex}
+\subfile{sections/ex_1.21.tex}
+\subfile{sections/ex_1.22.tex}
+\subfile{sections/ex_1.23.tex}
+
+\section{Намиране на множеството от решения}
+
+\subfile{sections/describing_the_solution_set_example.tex}
+
+\subfile{sections/ex_2.15-17.tex}
+\subfile{sections/ex_2.18.tex}
+
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass{subfiles}
+
+\begin{document}
+
+\subsubsection{Задача 1.17 a)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        2x + 3y = 13@p_{*},
+        x - y = -1
+    }
+\end{equation*}
+
+\noindent Решение:
+
+\begin{equation*}
+    \overset{p_{1} \div 2}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x + \frac{3}{2}y = \frac{13}{2},
+        x - y = -1
+    }
+\end{equation*}
+\begin{equation*}
+    \overset{-p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x + \frac{3}{2}y = \frac{13}{2},
+        - \frac{5}{2}y = -\frac{15}{2}
+    }
+\end{equation*}
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + \frac{3}{2}y = \frac{13}{2},
+        y = 3
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x = 2,
+        y = 3
+    }
+\end{equation*}
+
+\subsubsection{Задача 1.17 b)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x - z = 0@p_{*},
+        3x + y = 1,
+        -x + y + z = 4
+    }
+\end{equation*}
+
+\noindent Решение:
+
+\begin{equation*}
+    \overset{p_{1} + p_{3}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x - z = 0,
+        3x + y = 1,
+        y = 4
+    }
+\end{equation*}
+\begin{equation*}
+    \sysdelim..\systeme{
+        x - z = 0,
+        x = -1,
+        y = 4
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        z = -1,
+        x = -1,
+        y = 4
+    }
+\end{equation*}
+
+\end{document}

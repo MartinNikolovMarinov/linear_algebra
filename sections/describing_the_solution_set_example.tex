@@ -1,0 +1,227 @@
+\documentclass{subfiles}
+
+\begin{document}
+
+\subsubsection{Примерно Уравнение 1}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        2x + z = 3@p_{*},
+        x - y - z = 1,
+        3x - y = 4
+    }
+    \quad
+    \overset{-(\frac{1}{2})p_{1} + p_{2}}{\underset{-(\frac{3}{2})p_{1} + p_{3}}{\longrightarrow}}
+    \quad
+    \sysdelim..\systeme{
+        2x + z = 3,
+        -y - \frac{3}{2}z = -\frac{1}{2},
+        -y - \frac{3}{2}z = -\frac{1}{2}
+    }
+    \quad
+    \overset{-p_{2}+p_{3}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        2x + z = 3,
+        -y - \frac{3}{2}z = -\frac{1}{2},
+        0 = 0
+    }
+\end{equation*}
+
+\noindent Така разбираме, че едното от уравненията не е определящо за множеството от решения. Множеството на решенията може да бъде описано като:
+
+\begin{equation*}
+    \{(x,y,z)\ |\ 2x + z = 3 \text{ and } -y - \frac{3z}{2} = - \frac{1}{2}
+\end{equation*}
+
+\noindent Което е по-дборе, защото уравнения са 2 вместо 3, но има и по-добър начин. Използвайки \textbf{свободната променливата} $z$, която \textbf{не води уравнение}, за да опишем променливите, които \textbf{водят уравнение}, $x$ и $y$:
+
+\begin{align*}
+    y = \frac{1}{2} - \frac{3}{2}z \\
+    x = \frac{3}{2} - \frac{1}{2}z
+\end{align*}
+
+\noindent Така можем да опишем решението като:
+
+\begin{equation*}
+    \textstyle
+    \{ \left(\left(\frac{3}{2} - \frac{1}{2}z\right), \left(\frac{1}{2} - \frac{3}{2}z\right), z \right) \ |\ z \in \mathbb{R}\}
+\end{equation*}
+
+\noindent Предимството е, че $z$ може да бъде всяко реално число. Това значително улеснява работата по определяне на елементите в множеството от решения. Например, ако приемем $z = 2$ тогава веднага виждаме, че $(\frac{1}{2}, −\frac{5}{2}, 2)$ е решение.
+
+\subsubsection{Примерно Уравнение 2}
+
+\noindent Една система може да има повече от една \textbf{свободна променлива}:
+
+\begin{equation*}
+    \sysdelim..\systeme[x,y,z,w]{
+        x + y + z - w = 1@p_{*},
+        y - z + w = -1,
+        3x + 6z - 6w = 6,
+        -y + z - w = 1
+    }
+    \quad
+    \overset{-3p_{1}+p_{3}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme[x,y,z,w]{
+        x + y + z - w = 1,
+        y - z + w = -1,
+        -3y + 3z - 3w = 3,
+        -y + z - w = 1
+    }
+    \quad
+    \overset{3p_{2} + p_{3}}{\underset{p_{2} + p_{4}}{\longrightarrow}}
+    \quad
+    \sysdelim..\systeme[x,y,z,w]{
+        x + y + z - w = 1,
+        y - z + w = -1,
+        0 = 0,
+        0 = 0
+    }
+\end{equation*}
+
+\noindent Oставa $x$ и $y$ водещи и $z$ и $w$ свободни. Първо изразяваме водещата променлива $y$ чрез $z$ и $w$:
+
+\begin{equation*}
+    y = −1 + z - w
+\end{equation*}
+
+\noindent След това изразяваме $x$ чрез $z$ и $w$:
+
+\begin{equation*}
+    x = 2 - 2z + 2w
+\end{equation*}
+
+\noindent А това дава следното множество от решения:
+
+\begin{equation*}
+    \{ ((2 - 2z + 2w), ( -1 + z - w ), z, w) \ |\ z, w \in \mathbb{R}\}
+\end{equation*}
+
+\subsubsection{Примерно Уравнение 3 (разликата между параметри и свбодни променливи)}
+
+\noindent Списъкът с водещи променливи може да пропусне някои колони:
+
+\begin{equation*}
+    \sysdelim..\systeme[x,y,z,w]{
+        2x - 2y = 0@p_{*},
+        z + 3w = 2,
+        3x - 3y = 0,
+        x - y + 2z + 6w = 4
+    }
+    \quad
+    \overset{-(\frac{3}{2})p_{1} + p_{3}}{\underset{-(\frac{1}{2})p_{1} + p_{4}}{\longrightarrow}}
+    \quad
+    \sysdelim..\systeme[x,y,z,w]{
+        2x - 2y = 0,
+        z + 3w = 2,
+        0 = 0,
+        2z + 6w = 4
+    }
+    \quad
+    \overset{-2p_{2}+p_{4}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme[x,y,z,w]{
+        2x - 2y = 0,
+        z + 3w = 2,
+        0 = 0,
+        0 = 0
+    }
+\end{equation*}
+
+\noindent Тук $x$ и $z$ са водещите променливи. Свободните променливи са $y$ и $w$ и затова можем да опишем набора от решения като $\{ (y, y, 2 - 3w, w)\ |\ y, w \in \mathbb{R} \}$. Ако вземем списъкът $(1, 1, 2, 0)$ удовлетворява системата, но $(1, 0, 5, 4)$ не, тъй като първата и втората стойност не са равни.
+
+\noindent Променлива, която използваме за описване на семейство от решения, е параметър. Казваме, че решението, зададено в предишния пример, е параметризирано с $y$ и $w$.
+
+\noindent Термините \textbf{параметър} и \textbf{безплатна променлива} не означават едно и също нещо. В предишния пример $y$ и $w$ са свободни, тъй като в системата на ешелонната форма те не водят. Те са параметри, защото ги използвахме за описание на набора от решения.
+
+\subsubsection{Нотация са описване на множеството от решения}
+
+Първата нотация, която използваме, е тази за матрица. Бележи се с голяма латинска буква, а елементите в нея се бележат с малка латинска буква:
+
+\begin{equation*}
+    A = \left(
+            \begin{array}{ ccc }
+                1 & 2.2 & 5 \\
+                3 & 4 & -7
+            \end{array}
+        \right)
+\end{equation*}
+\begin{align*}
+    A_{2 \times 3} \text{ we say that the} & \text{ matrix is a 2 by 3 matrix} \\
+    a_{2,1} &= 3 \\
+    a_{1,2} &= 2.2 \\
+    a_{3,3} &= -7 \\
+\end{align*}
+
+\noindent Можем да използваме матричния запис при решаване на уравнение чрез метода на Гаус.
+
+\noindent Например, следната система може да се изрази с матрична нотация:
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + 2y = 4,
+        y - z = 0,
+        x + 2z = 4
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 2 & 0 & 4 \\
+            0 & 1 & -1 & 0 \\
+            1 & 0 & 2 & 4 \\
+        \end{array}
+    \right)
+\end{equation*}
+
+\noindent Стъпките по метода на Гаус:
+
+\begin{equation*}
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 2 & 0 & 4 \\
+            0 & 1 & -1 & 0 \\
+            1 & 0 & 2 & 4 \\
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{1}+p_{3}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 2 & 0 & 4 \\
+            0 & 1 & -1 & 0 \\
+            0 & -2 & 2 & 0 \\
+        \end{array}
+    \right)
+    \quad
+    \overset{2p_{2}+p_{3}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 2 & 0 & 4 \\
+            0 & 1 & -1 & 0 \\
+            0 & 0 & 0 & 0 \\
+        \end{array}
+    \right)
+\end{equation*}
+
+\noindent Така множеството решения е $\{(4 − 2z, z, z)\ |\ z \in \mathbb{R} \}$, което може да се разпише чрез векторена нотация:
+
+\begin{equation*}
+    \{
+        \left(\begin{array}{ c }-4 \\ 0 \\ 0 \end{array}\right) +
+        \left(\begin{array}{ c }-2 \\ 1 \\ 1  \end{array}\right) \cdot z
+        \ | \ z, w \in \mathbb{R}
+    \}
+\end{equation*}
+
+\noindent Векторите се бележат с малко по различна нотация:
+\begin{equation*}
+    \overrightarrow{v} = \left(\begin{array}{ c }1 \\ 3 \\ 7\end{array}\right)
+\end{equation*}
+
+\end{document}

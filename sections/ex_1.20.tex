@@ -1,0 +1,151 @@
+\documentclass{subfiles}
+
+\begin{document}
+
+\subsubsection{Задача 1.20 a)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y + z = 5@p_{*},
+        x - y = 0,
+        y + 2z = 7
+    }
+\end{equation*}
+
+\noindent Решение:
+
+\begin{equation*}
+    \overset{-p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x + y + z = 5,
+        -2y - z = -5,
+        y + 2z = 7
+    }
+\end{equation*}
+
+\begin{equation*}
+    \overset{\frac{1}{2}p_{2} + p_{3}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x + y + z = 5,
+        -2y - z = -5,
+        \frac{3}{2}z = \frac{9}{2} \implies z = 3
+    }
+\end{equation*}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y + z = 5,
+        -2y - z = -5,
+        z = 3
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x + y + z = 5,
+        y = 1,
+        z = 3
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x = 1,
+        y = 1,
+        z = 3
+    }
+\end{equation*}
+
+\subsubsection{Задача 1.20 b)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        3x + z = 7@p_{*},
+        x - y + 3z = 4,
+        x + 2y - 5z = -1
+    }
+\end{equation*}
+
+\noindent Пренаписваме уравнението:
+\begin{equation*}
+    \sysdelim..\systeme{
+        x - y + 3z = 4@p_{*},
+        x + 2y - 5z = -1,
+        3x + z = 7
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \overset{-p_{1} + p_{2}}{\underset{-3p_{1} + p_{3}}{\longrightarrow}}
+    \quad
+    \sysdelim..\systeme{
+        x - y + 3z = 4,
+        3y - 8z = -5,
+        3y - 8z = -5
+    }
+\end{equation*}
+
+\begin{equation*}
+    \overset{-p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x - y + 3z = 4,
+        3y - 8z = -5,
+        0 = 0
+    }
+\end{equation*}
+
+\noindent Отговор: Не може да се извърши заместване, следователно имаме \textbf{Безкрайно много решения.}
+
+\subsubsection{Задача 1.20 c)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + 3y + z = 0@p_{*},
+        -x - y = 2,
+        -x + y + 2z = 8
+    }
+\end{equation*}
+
+\noindent Решение:
+
+\begin{equation*}
+    \overset{p_{1} + p_{2}}{\underset{p_{1} + p_{2}}{\longrightarrow}}
+    \quad
+    \sysdelim..\systeme{
+        x + 3y + z = 0,
+        2y + z = 2,
+        4y + 3z = 8
+    }
+\end{equation*}
+
+\begin{equation*}
+    \overset{-2p_{2} + p_{3}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x + 3y + z = 0,
+        2y + z = 2,
+        z = 4
+    }
+\end{equation*}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + 3y + z = 0,
+        y = -1,
+        z = 4
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x = -1,
+        y = -1,
+        z = 4
+    }
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,300 @@
+\documentclass{subfiles}
+
+\begin{document}
+
+\subsubsection{Задача 2.18 a)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        3x + 6y = 18@p_{*},
+        x + 2y = 6
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \left(
+        \begin{array}{ cc|c }
+            3 & 6 & 18 \\
+            1 & 2 & 6
+        \end{array}
+    \right)
+    \quad
+    \overset{-\frac{1}{3}p_{1}+p_{2}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ cc|c }
+            3 & 6 & 18 \\
+            0 & 0 & 0
+        \end{array}
+    \right)
+    \quad
+    \longrightarrow
+    \quad
+    x = 6 - 2y,\quad y = y
+\end{equation*}
+
+\noindent Множеството от решения е:
+\begin{equation*}
+    \{
+        \left(\begin{array}{ c } 6 \\ 0 \end{array}\right) +
+        \left(\begin{array}{ c } -2 \\ 1 \end{array}\right) y
+        \ |\ y \in \mathbb{R}
+    \}
+\end{equation*}
+
+\subsubsection{Задача 2.18 b)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y = 1@p_{*},
+        x - y = -1
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \left(
+        \begin{array}{ cc|c }
+            1 & 1 & 1 \\
+            1 & -1 & -1
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{1}+p_{2}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ cc|c }
+            1 & 1 & 1 \\
+            0 & -2 & -2
+        \end{array}
+    \right)
+    \quad
+    \longrightarrow
+    \quad
+    x = 0,\quad y = 1
+\end{equation*}
+
+\noindent Множеството от решения е:
+\begin{equation*}
+    \{
+        \left(\begin{array}{ c } 0 \\ 1 \end{array}\right)
+    \}
+\end{equation*}
+
+\subsubsection{Задача 2.18 c)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x_{1} + x_{3} = 4@p_{*},
+        x_{1} - x_{2} + 2x_{3} = 5,
+        4x_{1} - x_{2} + 5x_{3} = 17
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 0  & 1 & 4 \\
+            1 & -1 & 2 & 5 \\
+            4 & -1 & 5 & 17
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{1}+p_{2}}{\underset{-4p_{1}+p_{3}}{\longrightarrow}}
+    \quad
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 0  & 1 & 4 \\
+            0 & -1 & 1 & 1 \\
+            0 & -1 & 1 & 1
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{2}+p_{3}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 0  & 1 & 4 \\
+            0 & -1 & 1 & 1 \\
+            0 & 0 & 0 & 0
+        \end{array}
+    \right)
+    \quad
+    \longrightarrow
+    \quad
+    \begin{array}{ c }
+        x_{1} = 4 - x_{3},\\
+        x_{2} = -1 + x_{3}, \\
+        x_{3} = x_{3}
+    \end{array}
+\end{equation*}
+
+\noindent Множеството от решения е:
+\begin{equation*}
+    \{
+        \left(\begin{array}{ c } 4 \\ -1 \\ 0 \end{array}\right) +
+        \left(\begin{array}{ c } -1 \\ 1 \\ 1 \end{array}\right) x_{3}
+        \ |\ x_{3} \in \mathbb{R}
+    \}
+\end{equation*}
+
+\subsubsection{Задача 2.18 d)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        2a + b - c = 2@p_{*},
+        2a + c = 3,
+        a - b = 0
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \left(
+        \begin{array}{ ccc|c }
+            2 & 1  & -1 & 2 \\
+            2 & 0  & 1  & 3 \\
+            1 & -1 & 0  & 0
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{1}+p_{2}}{\underset{-\frac{1}{2}p_{1}+p_{3}}{\longrightarrow}}
+    \quad
+    \left(
+        \begin{array}{ ccc|c }
+            2 & 1               & -1            & 2 \\
+            0 & -1              & 2             & 1 \\
+            0 & -\frac{3}{2}    & \frac{1}{2}   & -1
+        \end{array}
+    \right)
+    \quad
+    \overset{-\frac{3}{2}p_{2}+p_{3}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ ccc|c }
+            2 & 1  & -1           & 2 \\
+            0 & -1 & 2            & 1 \\
+            0 & 0  & -\frac{5}{2} & - \frac{5}{2}
+        \end{array}
+    \right)
+    \quad
+    \longrightarrow
+    \quad
+    \begin{array}{ c }
+        a = 1 \\
+        b = 1 \\
+        c = 1 \\
+    \end{array}
+\end{equation*}
+
+\noindent Множеството от решения е:
+\begin{equation*}
+    \{ \left(\begin{array}{ c } 1 \\ 1 \\ 1 \end{array}\right) \}
+\end{equation*}
+
+\subsubsection{Задача 2.18 e)}
+
+\begin{equation*}
+    \sysdelim..\systeme[x,y,z,w]{
+        x + 2y - z = 3@p_{*},
+        2x + y + w = 4,
+        x - y + z + w = 1
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \left(
+        \begin{array}{ cccc|c }
+            1 & 2  & -1 & 0 & 3 \\
+            2 & 1  & 0 & 1 & 4 \\
+            1 & -1 & 1 & 1 & 1
+        \end{array}
+    \right)
+    \quad
+    \overset{-2p_{1}+p_{2}}{\underset{-p_{1}+p_{3}}{\longrightarrow}}
+    \quad
+    \left(
+        \begin{array}{ cccc|c }
+            1 & 2  & -1 & 0 & 3 \\
+            0 & -3 & 2 & 1 & -2 \\
+            0 & -3 & 2 & 1 & -2
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{2}+p_{3}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ cccc|c }
+            1 & 2  & -1 & 0 & 3 \\
+            0 & -3 & 2 & 1 & -2 \\
+            0 & 0 & 0 & 0  & 0
+        \end{array}
+    \right)
+\end{equation*}
+
+\noindent Свободните параматери са $x$, $y$, изразяваме ги чрез $w$ и $z$:
+\begin{align*}
+    x &= \frac{5}{3}\ −\ \frac{1}{3}z\ −\ \frac{2}{3}w \\
+    y &= \frac{2}{3}\ +\ \frac{2}{3}z\ +\ \frac{1}{3}w \\
+    z &= z \\
+    w &= w
+\end{align*}
+
+\noindent Множеството от решения е:
+\begin{equation*}
+    \{
+        \left(\begin{array}{ c }5 / 3 \\ 2 / 3 \\ 0 \\ 0 \end{array}\right) +
+        \left(\begin{array}{ c }-(1 / 3) \\ 2 / 3 \\ 1 \\ 0 \end{array}\right) z +
+        \left(\begin{array}{ c }-(2 / 3) \\ 1 / 3 \\ 0 \\ 1 \end{array}\right) w
+        \ |\ z,\ w \in \mathbb{R}
+    \}
+\end{equation*}
+
+\subsubsection{Задача 2.18 f)}
+
+\begin{equation*}
+    \sysdelim..\systeme[x,y,z,w]{
+        x + z + w = 4@p_{*},
+        2x + y - w = 2,
+        3x + y + z = 7
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \left(
+        \begin{array}{ cccc|c }
+            1 & 0 & 1 & 1 & 4 \\
+            2 & 1 & 0 & -1 & 2 \\
+            3 & 1 & 1 & 0 & 7
+        \end{array}
+    \right)
+    \quad
+    \overset{-2p_{1}+p_{2}}{\underset{-3p_{1}+p_{3}}{\longrightarrow}}
+    \quad
+    \left(
+        \begin{array}{ cccc|c }
+            1 & 0 & 1 & 1 & 4 \\
+            0 & 1 & -2 & -3 & -6 \\
+            0 & 1 & -2 & -3 & -5
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{2}+p_{3}}{\longrightarrow}
+    \quad
+    \left(
+        \begin{array}{ cccc|c }
+            1 & 0 & 1 & 1 & 4 \\
+            0 & 1 & -2 & -3 & -6 \\
+            0 & 0 & 0 & 0 & 1
+        \end{array}
+    \right)
+\end{equation*}
+
+\noindent Множеството от решения е:
+\begin{equation*}\varnothing \text{ empty set}\end{equation*}
+
+\end{document}

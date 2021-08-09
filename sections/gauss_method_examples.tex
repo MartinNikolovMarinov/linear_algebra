@@ -1,0 +1,125 @@
+\documentclass{subfiles}
+
+\begin{document}
+
+\subsubsection{Примерно уравнение 1 (подробно решение)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        3x_{3} = 9,
+        x_{1} + 5x_{2} - 2x_{3} = 2,
+        \frac{1}{3}x_{1} + 2x_{2} = 3
+    }
+\end{equation*}
+
+\noindent Първо разменяме ред 1 с ред 3:
+\begin{equation*}
+    \sysdelim..\systeme{
+        \frac{1}{3}x_{1} + 2x_{2} = 3,
+        x_{1} + 5x_{2} - 2x_{3} = 2,
+        3x_{3} = 9
+    }
+\end{equation*}
+
+\noindent Ребалансираме уравнението на ред 1, като умножаваме с 3, за да премахнем дробната част:
+\begin{equation*}
+    \sysdelim..\systeme{
+        x_{1} + 6x_{2} = 9 \quad\vert\times 3,
+        x_{1} + 5x_{2} - 2x_{3} = 2,
+        3x_{3} = 9
+    }
+\end{equation*}
+
+\noindent Умножаваме 1-вия ред с -1 и добавяме резултата към 2-рия ред:
+\begin{equation*}
+    \sysdelim..\systeme{
+        x_{1} + 6x_{2} = 9 \quad\quad \text{(остава не променен)},
+        - x_{2} - 2x_{3} = -7 \quad\vert + (-x_{1} - 6x_{2} = -9),
+        3x_{3} = 9
+    }
+\end{equation*}
+
+\noindent Стигнахме до стъпка в която е лесно да се открие решение:
+
+\begin{equation*}
+\sysdelim..\systeme{
+    x_{1} + 6x_{2} = 9,
+    - x_{2} - 2x_{3} = -7,
+    x_{3} = 3
+}
+\quad
+\longrightarrow
+\quad
+\sysdelim..\systeme{
+    x_{1} + 6x_{2} = 9,
+    x_{2} = 1,
+    x_{3} = 3
+}
+\quad
+\longrightarrow
+\quad
+\sysdelim..\systeme{
+    x_{1} = 3,
+    x_{2} = 1,
+    x_{3} = 3
+}
+\end{equation*}
+
+\noindent Така множеството което е решение на системата е $ \{ 3, 1, 3 \} $
+
+\subsubsection{Примерно уравнение 2}
+
+\indent Уравнение :
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y = 0@p_{*},
+        2x - y + 3z = 3,
+        x - 2y - z = 3
+    }
+\end{equation*}
+
+\noindent Използваме първия ред, за да премахнем $2x$ във втория ред и $1x$ в третия:
+
+\begin{equation*}
+    \overset{-2p_{1} + p_{2}}{\underset{-p_{1} + p_{3}}{\longrightarrow}}
+    \quad
+    \sysdelim..\systeme{
+        x + y = 0,
+        -3y + 3z = 3,
+        -3y - z = 3
+    }
+\end{equation*}
+\begin{equation*}
+    \overset{-p_{2} + p_{3}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x + y = 0,
+        -3y + 3z = 3,
+        -4z = 0
+    }
+\end{equation*}
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y = 0,
+        -3y + 3z = 3,
+        z = 0
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x + y = 0,
+        y = -1,
+        z = 0
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x = 1,
+        y = -1,
+        z = 0
+    }
+\end{equation*}
+
+\end{document}

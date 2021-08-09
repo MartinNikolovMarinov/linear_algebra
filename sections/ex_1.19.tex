@@ -1,0 +1,244 @@
+\documentclass{subfiles}
+
+\begin{document}
+
+\subsubsection{Задача 1.19 a)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        2x + 2y = 5@p_{*},
+        x - 4y = 0
+    }
+\end{equation*}
+
+\noindent Решение:
+
+\begin{equation*}
+    \overset{-\frac{1}{2}p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        2x + 2y = 5,
+        y = \frac{1}{2}
+    }
+\end{equation*}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        2x + 2y = 5,
+        y = \frac{1}{2}
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x = 2,
+        y = \frac{1}{2}
+    }
+\end{equation*}
+
+\subsubsection{Задача 1.19 b)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        -x + y = 1@p_{*},
+        x + y = 2
+    }
+\end{equation*}
+
+\begin{equation*}
+    \overset{p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        -x + y = 1,
+        y = \frac{3}{2}
+    }
+\end{equation*}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        -x + y = 1,
+        y = \frac{3}{2}
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x = \frac{1}{2},
+        y = \frac{3}{2}
+    }
+\end{equation*}
+
+\subsubsection{Задача 1.19 c)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x - 3y + z = 1@p_{*},
+        x + y + 2z = 14
+    }
+\end{equation*}
+
+\noindent Решение:
+
+\begin{equation*}
+    \overset{-p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x - 3y + z = 1,
+        4y + z = 13
+    }
+\end{equation*}
+
+\noindent Отговор: Не може да се извърши заместване, следователно имаме \textbf{Безкрайно много решения.}
+
+\subsubsection{Задача 1.19 d)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        -x - y = 1@p_{*},
+        -3x - 3y = 2
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \overset{-3p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        -x - y = 1,
+        0 = -1
+    }
+\end{equation*}
+
+\noindent Отговор: Имаме противоречие $0=-1$, следователно системата \textbf{Няма решения.}
+
+\subsubsection{Задача 1.19 e)}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        4y + z = 20@p_{*},
+        2x - 2y + z = 0,
+        x + z = 5,
+        x + y - z = 10
+    }
+\end{equation*}
+
+\noindent Пренареждаме уравнението:
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y - z = 10@p_{*},
+        2x - 2y + z = 0,
+        x + z = 5,
+        4y + z = 20
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \overset{-2p_{1} + p_{2}}{\underset{-p_{1} + p_{3}}{\longrightarrow}}
+    \quad
+    \sysdelim..\systeme{
+        x + y - z = 10,
+        -4y + 3z = -20,
+        -y + 2z = -5,
+        4y + z = 20
+    }
+\end{equation*}
+
+\begin{equation*}
+    \overset{4p_{3} + p_{4}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme{
+        x + y - z = 10,
+        -4y + 3z = -20,
+        -y + 2z = -5,
+        z = 0
+    }
+\end{equation*}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y - z = 10,
+        -4y + 3z = -20,
+        -y + 2z = -5,
+        z = 0
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x + y - z = 10,
+        -4y + 3z = -20,
+        y = 5,
+        z = 0
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x + y - z = 10,
+        20 = 20,
+        y = 5,
+        z = 0
+    }
+    \quad
+    \longrightarrow
+    \quad
+    \sysdelim..\systeme{
+        x = 5,
+        20 = 20,
+        y = 5,
+        z = 0
+    }
+\end{equation*}
+
+\noindent Отговор: отговора е $\{x, y, z\} = \{5, 5, 0\}$
+
+\subsubsection{Задача 1.19 f)}
+
+\begin{equation*}
+    \sysdelim..\systeme[x,y,z,w]{
+        2x + z + w = 5@p_{*},
+        y - w = -1,
+        3x - z - w = 0,
+        4x + y + 2z + w = 9
+    }
+\end{equation*}
+
+\noindent Пренареждаме уравнението:
+
+\begin{equation*}
+    \sysdelim..\systeme[x,y,z,w]{
+        4x + y + 2z + w = 9@p_{*},
+        2x + z + w = 5,
+        3x - z - w = 0,
+        y - w = -1
+    }
+\end{equation*}
+
+\noindent Решение:
+
+\begin{equation*}
+    \overset{-\frac{1}{2}p_{1} + p_{2}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme[x,y,z,w]{
+        4x + y + 2z + w = 9,
+        y - w = -1,
+        3x - z - w = 0,
+        y - w = -1
+    }
+\end{equation*}
+
+\begin{equation*}
+    \overset{-p_{2} + p_{4}}{\longrightarrow}
+    \quad
+    \sysdelim..\systeme[x,y,z,w]{
+        4x + y + 2z + w = 9,
+        y - w = -1,
+        3x - z - w = 0,
+        0 = 0
+    }
+\end{equation*}
+
+\noindent Отговор: Не може да се извърши заместване, следователно имаме \textbf{Безкрайно много решения.}
+
+\end{document}
