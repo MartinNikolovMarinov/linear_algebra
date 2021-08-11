@@ -151,12 +151,34 @@
 \subfile{sections/ex_1.22.tex}
 \subfile{sections/ex_1.23.tex}
 
-\section{Намиране на множеството от решения}
+\subsection{Намиране на множеството от решения}
 
 \subfile{sections/describing_the_solution_set_example.tex}
-
 \subfile{sections/ex_2.15-17.tex}
 \subfile{sections/ex_2.18.tex}
 \subfile{sections/ex_2.19.tex}
+
+\subsection{Общото решение = Специфичното решение + хомогенното решение}
+
+\noindent Всяка линейна система, която е в ешелонна форма, има множество от решения в следната форма:
+\begin{equation*}
+    \{ \vv{p} + c_{1}\vv{\beta}_{1} + \cdots + c_{k}\vv{\beta}_{k}\ |\ c_{1},...,c_{k} \in \mathbb{R}\}
+\end{equation*}
+
+\noindent Където вектора $\vv{p}$ е специфично решение и броя на векторите $\vv{\beta}_{1} ... \vv{\beta}_{k}$ е равен на броя \textbf{свободни променливи}.
+
+\noindent Линейните уравнения са \textbf{хомогенни} ако имат константа равна на 0, а една система е \textbf{хомогенна} когато всички уравнения са \textbf{хомогенни}:
+\begin{equation*}
+    a_{1}x_{1} + a_{2}x_{2} + \cdots + a_{n}x_{n} = 0
+\end{equation*}
+
+\noindent Когато системата е хомогенна тя няма специфично решение $\vv{p} = 0$, а множеството от решения има следната форма:
+\begin{equation*}
+    \{ c_{1}\vv{\beta}_{1} + \cdots + c_{k}\vv{\beta}_{k}\ |\ c_{1},...,c_{k} \in \mathbb{R}\}
+\end{equation*}
+
+\noindent Друго характерно за хомогенните системи е, че те винаги имат едно уникално решение или безброй много решения.
+
+\subfile{sections/ex_3.14.tex}
 
 \end{document}

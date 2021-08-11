@@ -1,0 +1,86 @@
+\documentclass{subfiles}
+
+\begin{document}
+
+\subsubsection{Задача 3.14}
+
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y - 2z = 0@p_{*},
+        x - y = -3,
+        3x - y - 2z = -6,
+        2y - 2z = 3
+    }
+\end{equation*}
+
+\noindent Решение:
+\begin{equation*}
+    \left(
+        \begin{array}{ ccc|c }
+            1 & 1  & -2 &  0 \\
+            1 & -1 &  0 & -3 \\
+            3 & -1 & -2 & -6 \\
+            0 & 2  & -2 &  3 \\
+        \end{array}
+    \right)
+    \quad
+    \overset{-p_{1}+p_{2}}{\underset{-3p_{1}+p_{3}}{\longrightarrow}}
+    \quad
+    \left(
+    \begin{array}{ ccc|c }
+        1 & 1  & -2 &  0 \\
+        0 & -2 &  2 & -3 \\
+        0 & -4 &  4 & -6 \\
+        0 & 2  & -2 &  3 \\
+    \end{array}
+    \right)
+    \quad
+    \overset{-2p_{2}+p_{3}}{\underset{p_{2}+p_{4}}{\longrightarrow}}
+    \quad
+    \left(
+    \begin{array}{ ccc|c }
+        1 & 1  & -2 &  0 \\
+        0 & -2 &  2 & -3 \\
+        0 &  0 &  0 &  0 \\
+        0 &  0 &  0 &  0 \\
+    \end{array}
+    \right)
+    \quad
+    \longrightarrow
+    \quad
+    \begin{array}{ c }
+        x = -\frac{3}{2} + z,\\
+        y = \frac{3}{2} + z, \\
+        z = z
+    \end{array}
+\end{equation*}
+
+\noindent Множеството от решения е:
+\begin{equation*}
+    \{
+        \left(\begin{array}{ c } -(3/2) \\ 3/2 \\ 0 \end{array}\right) +
+        \left(\begin{array}{ c } 1 \\ 1 \\ 1 \end{array}\right) z
+        \ |\ z \in \mathbb{R}
+    \}
+\end{equation*}
+
+\noindent Ако конвертираме системата към хомогенна:
+\begin{equation*}
+    \sysdelim..\systeme{
+        x + y - 2z = 0@p_{*},
+        x - y = 0,
+        3x - y - 2z = 0,
+        2y - 2z = 0
+    }
+\end{equation*}
+
+\noindent Стъпките по метода на Гаус са същите, но множеството от решения е:
+
+\begin{equation*}
+    \{
+        \left(\begin{array}{ c } 1 \\ 1 \\ 1 \end{array}\right) z
+        \ |\ z \in \mathbb{R}
+    \}
+\end{equation*}
+
+\end{document}
