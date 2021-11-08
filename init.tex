@@ -230,7 +230,7 @@
         width=0.33333333\textwidth]
 
         \addplot[domain=-20:20]{(7 - 3*x)/2};
-        \addplot[domain=-20:20]{(14 - 6*x)/4 };
+        \addplot[domain=-20:20]{(14 - 6*x)/4};
     \end{axis}
 \end{tikzpicture}
 
@@ -247,5 +247,65 @@ $ \hspace{0.2\linewidth} $ \sysdelim..\systeme{
     6x + 4y = 14
 }
 $
+
+\subsection {Вектори}
+
+\noindent Векторите са обекти с посока и величина/магнитут. Два вектора с еднаква посока и еднакъв магнитут са еднакви, \textbf{дори когато имат различна начална точка}.
+
+\noindent Можем да опишем вектор $ (x_{1}, y_{1}) $ до $ (x_{2}, y_{2}) $ по следния начин:
+
+\begin{equation*}
+    \left(\begin{array}{ c }x_{1} - x_{2} \\ y_{1} - y_{2} \end{array}\right)
+\end{equation*}
+
+\noindent или по-генерализирано:
+
+\begin{equation*}
+    \overrightarrow{v} = \left(\begin{array}{ c }v_{1} \\ v_{2} \end{array}\right)
+\end{equation*}
+
+\noindent където $ \overrightarrow{v} $ започва в някоя избрана начална точка и приключва на $ (v_{1}, v_{2}) $ разтояние от тази точка.
+
+\noindent Можем да дефинираме множеството от реалните числа по следния начин (тук \textbf{нарочно} не правим голяма разлика между вектор и точка):
+
+\begin{equation*}
+    \mathbb{R}^{n} = \{ \left(\begin{array}{ c }v_{1} \\ \vdots \\ v_{n} \end{array}\right) \mid v_{1},\ \ldots\ , v_{n} \in \mathbb{R} \}
+\end{equation*}
+
+\subsection{Линия}
+
+\noindent Линия в $ \mathbb{R}^2 $ от $ (1, 2) $ до $ (3, 1) $ може да се представя с два вектора в следното множеството:
+
+\begin{equation*}
+    \{ \left(\begin{array}{ c } 1 \\ 2 \end{array}\right) + t \left(\begin{array}{ c } 3 - 1 \\ 1 - 2 \end{array}\right) \mid t \in \mathbb{R} \}
+\end{equation*}
+
+\noindent след сметките:
+
+\begin{equation*}
+    \{ \left(\begin{array}{ c } 1 \\ 2 \end{array}\right) + t \left(\begin{array}{ c } 2 \\ -1 \end{array}\right) \mid t \in \mathbb{R} \}
+\end{equation*}
+
+\subsection{Равнина (plain)}
+
+\noindent Равнина в $ \mathbb{R}^3 $ през точките $(1,0,5)$, $(2,1,-3)$ и $(-2, 4, 0.5)$ може се представи с три вектора в множеството:
+
+\begin{equation*}
+    \{ \left(\begin{array}{ c } 1 \\ 0 \\ 5 \end{array}\right) + t \left(\begin{array}{ c } 2 - 1 \\ 1 - 0 \\ -3 - 5 \end{array}\right) + s \left(\begin{array}{ c } -2 - 1 \\ 4 - 0 \\ 0.5 - 5 \end{array}\right) \mid t, s \in \mathbb{R} \}
+\end{equation*}
+
+\noindent след сметките:
+
+\begin{equation*}
+    \{ \left(\begin{array}{ c } 1 \\ 0 \\ 5 \end{array}\right) + t \left(\begin{array}{ c } 1 \\ 1 \\ -8 \end{array}\right) + s \left(\begin{array}{ c } -3 \\ 4 \\ -4.5 \end{array}\right) \mid t, s \in \mathbb{R} \}
+\end{equation*}
+
+\noindent \textbf{Генерелазираната дефиниция:}
+
+\noindent Множество в слдната форма $ \{ \vv{p} + t_{1}\vv{v}_{1} + t_{2}\vv{v}_{2} + \ldots t_{k}\vv{v}_{k} \mid t_{1},\ \ldots\ , t_{k} \}$ където $ v_{1},\ \ldots\ , v_{k} \in \mathbb{R}^n $ и $ k \leq n $, то това е k-мерна линейна повърхност (k-dimentional linear serfice) или k-flat (няма превод тва).
+
+\textbf{
+    TODO: Продължи с решаване на задачите сапочващи на 41-ва страница.
+}
 
 \end{document}
